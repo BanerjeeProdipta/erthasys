@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'BalooDa2';
+  src: url('/fonts/BalooDa2/BalooDa2-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BalooDa2';
+  src: url('/fonts/BalooDa2/BalooDa2-Medium.ttf');
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: 'BalooDa2';
+  src: url('/fonts/BalooDa2/BalooDa2-Bold.ttf');
+  font-weight: 700;
+  font-style: bold;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .container {
+    padding: 0px 1rem;
+  }
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 16px;
+}
+.pagination-container .pagination-item a,
+.next,
+.previous {
+  padding: 12px;
+  height: 32px;
+  text-align: center;
+  margin: auto 10px;
+  color: black;
+  background-color: rgba(136, 136, 136, 0.4);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  user-select: none;
+}
+
+.pagination-container .pagination-item a:hover {
+  background-color: white;
+  border: 2px solid #3e6b52;
+}
+.pagination-container .pagination-item.selected a {
+  background-color: white;
+  border: 2px solid #3e6b52;
+}
+.next .disabled,
+.previous .disabled {
+  background-color: rgba(136, 136, 136, 0.2);
+}
+
+.pagination-container .pagination-item.disabled:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination-container .next:hover,
+.previous:hover {
+  border: 2px solid #3e6b52;
+}
+
+.pagination-container .disabled {
+  border: none !important;
+  pointer-events: none;
+}
+
+/* React calendar styles */
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+  background-color: #3e6b52 !important;
+}
